@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #9F7E69;
+  --secondary-color: #F7FFE0;
+  --detail-color: #FFEEE2;
+  --base-size: 16px;
+  --header-footer-size: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+
+html {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+main { 
+ display: none;
+ flex-grow: 1;
+}
+
+header,
+footer {
+  background-color: var(--primary-color);
+  padding: 48px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: var(--detail-color);
+}
+
+.current-word {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.current-word>div {
+  background: var(--detail-color);
+  border: 1px solid #000000;
+  color: var(--detail-color);
+  display: inline-block;
+  font-size: 14px;
+  height: 45px;
+  line-height: 45px;
+  margin: 5px;
+  text-transform: uppercase;
+  width: 45px;
+  text-align: center;
+}
+
+.letters {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.letters>div {
+  display: flex;
+}
+
+.letters>div>p {
+  background-color: #FFEEE2;
+  cursor: pointer;
+  margin: 8px;
+  padding: 8px;
+}
+
+.message {
+  background-color: var(--detail-color);
+  border-radius: 10px;
+  color: #000000;
+  display: none;
+  font-size: 50px;
+  margin: 12px;
+  padding: 24px;
+}
+
+.restart,
+.start-button {
+  background-color: #9F7E69;
+  border-radius: 10px;
+  color: var(--detail-color);
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 16px;
+  width: fit-content;
+}
+
+.start-game {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 16px;
+  text-align: center;
+}
+
+.the-game {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.used {
+  background-color: #9F7E69 !important;
+}
+
+.winner {
+  color: #000000 !important;
+}
+
+@media screen and (max-width: 768px) {
+
+  .current-word>div {
+    align-content: center;
+    height: 30px;
+    justify-content: center;
+    line-height: 30px;
+    width: 30px;
+
+  }
+
+  .letters>div>p {
+    margin: 4px;
+    padding: 8px;
+  }
+
+}
