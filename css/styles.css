@@ -45,6 +45,11 @@ h1 {
   color: var(--detail-color);
 }
 
+span {
+  color: rgb(194, 0, 0);
+  font-size: larger;
+}
+
 .current-word {
   display: flex;
   flex-direction: row;
